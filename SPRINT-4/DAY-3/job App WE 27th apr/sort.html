@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<script>
+// number sorting
+var arr=[1,2,3,4,1,0,10,20,30,50,15]
+
+console.log(arr.sort()) // wrong sort
+
+
+
+var out=arr.sort(function(a,b){return a-b}) // increaing order
+console.log(out)
+
+
+var out=arr.sort(function(a,b){return b-a}) // decreasing order
+
+console.log(out)
+
+
+// str sorting
+
+
+var str=['q','w','e','r','r','y'] 
+console.log(str.sort()) 
+
+
+
+var str=['sp','np','rp','mp'] 
+str.sort(function(a,b){
+if(a>b){return 1;}
+if(a<b){return  -1;}
+return 0;
+})
+console.log(str)
+
+str.sort(function(a,b){
+if(a>b){return -1;}
+if(a<b){return  1;}
+return 0;
+})
+console.log(str)
+
+
+// object sorting
+
+var data=[
+    {name:'sp',role:'fsd',salary:10},
+    {name:'np',role:'be',salary:8},
+    {name:'rp',role:'be',salary:30},
+    {name:'mp',role:'fe',salary:12},
+]
+
+
+data.sort(function(a,b){ // inc order of name
+    if(a.name>b.name){return 1} 
+    if(a.name<b.name){return -1} // interchange 1 & -1 to get reverse
+    return 0
+})
+console.log(data)
+
+
+var data1=[
+    {name:'sp',role:'fsd',salary:10},
+    {name:'np',role:'be',salary:8},
+    {name:'rp',role:'be',salary:30},
+    {name:'mp',role:'fe',salary:12},
+]
+
+data1.sort(function(a,b){
+    return a.salary-b.salary; // inc order of salary // interchange a&b to reverse
+})
+console.log(data1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
