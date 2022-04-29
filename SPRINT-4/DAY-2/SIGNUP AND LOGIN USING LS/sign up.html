@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+    <style>
+        a{
+            text-decoration: none;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    
+<h1>Sign-up before proceeding</h1>
+
+<form id="form" action="">
+<input id="email" type="text" placeholder="enter email">
+<input id="number" type="number" placeholder="enter phone number">
+<input id="password" type="text" placeholder="enter password">
+<input type="submit">
+
+</form>
+<div><a href="login.html"></a></div>
+
+
+
+</body>
+</html>
+
+<script>
+
+var arr=JSON.parse(localStorage.getItem('data'))||[]
+var form=document.querySelector('form')
+form.addEventListener('submit',function(event){
+    event.preventDefault()
+
+var object={
+    email:form.email.value,
+    number:form.number.value,
+    password:form.password.value
+}
+arr.push(object)
+localStorage.setItem('data',JSON.stringify(arr))
+alert('Signup successful 👍')
+document.querySelector('a').innerText='Now you can login. Click here to login 👈'
+
+})
+
+
+
+</script>
